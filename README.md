@@ -11,11 +11,12 @@
 > cd baileys-bot-whatsapp 
 > npm i
 ```
-## PAIRING CODE
+## Connect
+* PAIRING CODE
 ```bash
 > node index.js --use-pairing-code
 ```
-## START
+* START
 ```bash
 > npm start
 ```
