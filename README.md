@@ -1,11 +1,6 @@
-# TABRAK LURUS
-
->
->
->
 </div>
 <p align="center">
-  <a href="https://github.com/WhyDepin"><img title="Author" src="https://img.shields.io/badge/Author-DepinKunn-red.svg?style=for-the-badge&logo=github" /></a>
+  <a href="https://github.com/WhyDepin/baileys-bot-whatsapp"><img title="Script" src="https://img.shields.io/badge/Author-TabrakLurus-red.svg?style=for-the-badge&logo=github" /></a>
   <h4 align="center">
 </h4>
 </p>
