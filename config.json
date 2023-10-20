@@ -1,0 +1,10 @@
+{
+  "owner": ["628871746203"],
+  "prefix": "/^[°•π÷×¶∆£¢€¥®™+✓_=|/~!?@#%^&.©^]/i",
+  "pairingNum": "",
+  "msg": {
+      "owner": "Features can only be accessed owner!",
+      "group": "Features only accessible in group!",
+      "private": "Features only accessible private chat!"
+  }
+}
