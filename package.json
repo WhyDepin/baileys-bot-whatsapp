@@ -1,12 +1,11 @@
 {
-  "name": "bjirka",
+  "name": "Tabrak Lurus",
   "version": "1.2.0",
   "main": "index.js",
-  "type": "CommonJS",
   "scripts": {
     "start": "node index.js --max-old-space-size=8192"
   },
-  "author": "bjurka",
+  "author": "Tabrak Lurus",
   "license": "MIT",
   "dependencies": {
     "@whiskeysockets/baileys": "latest",
