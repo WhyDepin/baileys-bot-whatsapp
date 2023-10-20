@@ -5,17 +5,17 @@
 </h4>
 </p>
 
-## TERMUX INSTALLATION
+# TERMUX INSTALLATION
 ```bash
 > git clone https://github.com/WhyDepin/baileys-bot-whatsapp 
 > cd baileys-bot-whatsapp 
 > npm i
 ```
-# PAIRING CODE
+## PAIRING CODE
 ```bash
 > node index.js --use-pairing-code
 ```
-# START
+## START
 ```bash
 > npm start
 ```
@@ -25,10 +25,10 @@
 * [Git](https://git-scm.com/downloads)
 
 ## SETTING
-* [`PREFIX`](https://github.com/WhyDepin/baileys-bot-whatsapp/edit/main/config.json)
+* [`setting`](https://github.com/WhyDepin/baileys-bot-whatsapp/edit/main/config.json)
 
   
-  # Thanks
+## Thanks
 * [`Baileys`](https://github.com/adiwajshing/Baileys)
 * Tabrak Lurus Team
   
