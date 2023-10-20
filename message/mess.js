@@ -148,7 +148,7 @@ sock.sendMessage(from, {text: text, contextInfo: { externalAdReply: {  title: 'B
 }
 break
 case prefix+'sc': {
-  reply('_*Coming soon In Github Or Youtube*_')
+  reply('_*Script: https://github.com/WhyDepin/baileys-bot-whatsapp*_')
   break
 }
  case prefix+"owner": {
