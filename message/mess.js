@@ -4,6 +4,7 @@
 • Team Tabrak Lurus
 • WhyDepin-Darwin-KiiCode
 */
+require('../config')
 const {
 	downloadContentFromMessage,
 	generateWAMessage,
@@ -49,7 +50,7 @@ const q = chats.slice(command.length + 1, chats.length)
 const botNumber = sock.user.id.split(':')[0] + '@s.whatsapp.net'
 const isGroup = m.key.remoteJid.endsWith('@g.us')
 const sender = isGroup ? (m.key.participant ? m.key.participant : m.participant) : m.key.remoteJid
-const isOwner = global.owner == sender ? true : [`${config.owner}@s.whatsapp.net`].includes(sender) ? true : false
+const isOwner = global.owner == sender ? true : [`${global.owner}@s.whatsapp.net`].includes(sender) ? true : false
 const groupMetadata = isGroup ? await sock.groupMetadata(from) : ''
 const groupName = isGroup ? groupMetadata.subject : ''
 const groupId = isGroup ? groupMetadata.id : ''
@@ -152,12 +153,12 @@ case prefix+'sc': {
   break
 }
  case prefix+"owner": {
-   sendContact(from, `${config.owner}@s.whatsapp.net`, 'WhyDepin', m)
+   sendContact(from, `${global.owner}@s.whatsapp.net`, 'WhyDepin', m)
  }
  break
  
 case prefix+'bc': case prefix+'broadcast':
-if (!isOwner) return reply(config.msg.owner)
+if (!isOwner) return reply('only owner')
 if (args.length < 2) return reply(`Masukkan isi pesannya`)
 var data = await store.chats.all()
  for (let i of data) {
