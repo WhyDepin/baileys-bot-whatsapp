@@ -1,7 +1,6 @@
 const fs = require('fs')
 const chalk = require('chalk')
 
-global.apikey = "apikey"//setting apikey
 global.namabot = 'Bens - MD'//setting bot name
 global.owner = ["628871746203"]//settinh owner
 global.prefix =   "/^[°•π÷×¶∆£¢€¥®™+✓_=|/~!?@#%^&.©^]/i"
