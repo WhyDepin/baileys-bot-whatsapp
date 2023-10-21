@@ -1,5 +1,5 @@
 // akumah masih pemula
-// setting in config.json
+// setting in config.js
 /*
 • Team Tabrak Lurus
 • WhyDepin-Darwin-KiiCode
@@ -49,7 +49,7 @@ const q = chats.slice(command.length + 1, chats.length)
 const botNumber = sock.user.id.split(':')[0] + '@s.whatsapp.net'
 const isGroup = m.key.remoteJid.endsWith('@g.us')
 const sender = isGroup ? (m.key.participant ? m.key.participant : m.participant) : m.key.remoteJid
-const isOwner = config.owner == sender ? true : [`${config.owner}@s.whatsapp.net`].includes(sender) ? true : false
+const isOwner = global.owner == sender ? true : [`${config.owner}@s.whatsapp.net`].includes(sender) ? true : false
 const groupMetadata = isGroup ? await sock.groupMetadata(from) : ''
 const groupName = isGroup ? groupMetadata.subject : ''
 const groupId = isGroup ? groupMetadata.id : ''
