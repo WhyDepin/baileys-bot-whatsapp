@@ -1,4 +1,4 @@
-require('../config')
+require('./config')
 const { Boom } = require('@hapi/boom')
 const NodeCache = require('node-cache')
 const readline = require('readline')
