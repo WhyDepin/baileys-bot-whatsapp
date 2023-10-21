@@ -17,7 +17,7 @@ const axios = require("axios")
 const path = require("path")
 const { exec } = require("child_process")
 const util = require("util")
-var config = require("../config.json")
+var config = require("../config.js")
 const func = require("../lib/function.js")
 
 //singkat
