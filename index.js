@@ -7,7 +7,7 @@ const fs = require('fs')
 const Pino = require('pino')
 const chalk = require('chalk')
 const { parsePhoneNumber } = require("libphonenumber-js")
-const config = require("./config.json")
+const config = require("./config.js")
 const { Client, Serialize } = require("./lib/serialize.js")
 
 const logger = Pino({ level: "fatal" }).child({ level: "fatal" })
