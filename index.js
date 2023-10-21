@@ -1,3 +1,4 @@
+require('../config')
 const { Boom } = require('@hapi/boom')
 const NodeCache = require('node-cache')
 const readline = require('readline')
@@ -7,7 +8,6 @@ const fs = require('fs')
 const Pino = require('pino')
 const chalk = require('chalk')
 const { parsePhoneNumber } = require("libphonenumber-js")
-const config = require("./config.js")
 const { Client, Serialize } = require("./lib/serialize.js")
 
 const logger = Pino({ level: "fatal" }).child({ level: "fatal" })
@@ -31,7 +31,7 @@ function uncache(module = '.') {
 	})
 }
 
-const usePairingCode = !!config.pairingNum || process.argv.includes('--use-pairing-code')
+const usePairingCode = !!global.pairingNum || process.argv.includes('--use-pairing-code')
 const useMobile = process.argv.includes('--mobile')
 
 const store = makeInMemoryStore({ logger: Pino({ level: "fatal" }).child({ level: "fatal" }) })
@@ -79,8 +79,8 @@ const startSock = async() => {
       if (useMobile) throw new Error('Cannot use pairing code with mobile api')
 	
 let phoneNumber
-      if (!!config.pairingNum) {
-         phoneNumber = config.pairingNum.replace(/[^0-9]/g, '')
+      if (!!global.pairingNum) {
+         phoneNumber = global.pairingNum.replace(/[^0-9]/g, '')
 
          if (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v))) {
             console.log(chalk.bgBlack(chalk.redBright("Start with your country's WhatsApp code, Example : 62xxx")))
@@ -189,8 +189,8 @@ async function askOTP() {
    sock.ev.on("creds.update", saveCreds)
    
    //update no restart
-   nocache('./message/mess', module => console.log(chalk.greenBright('[ WHATSAPP BOT ]  ') + chalk.cyanBright(` "${module}" Telah diupdate!`)))
-   nocache('./lib/serialize', module => console.log(chalk.greenBright('[ WHATSAPP BOT ]  ') + chalk.cyanBright(` "${module}" Telah diupdate!`)))
+   nocache('./message/mess', module => console.log(chalk.yellow(` "${module}" Telah diupdate!`))
+   nocache('./lib/serialize', module => console.log(chalk.yellow(` "${module}" Telah diupdate!`))
    
   sock.multi = true
 	sock.nopref = false
