@@ -189,8 +189,8 @@ async function askOTP() {
    sock.ev.on("creds.update", saveCreds)
    
    //update no restart
-   nocache('./message/mess', module => console.log(chalk.yellow(` "${module}" Telah diupdate!`)
-   nocache('./lib/serialize', module => console.log(chalk.yellow(` "${module}" Telah diupdate!`)
+   nocache('./message/mess', module => console.log(chalk.yellow(` "${module}" Telah diupdate!`)))
+   nocache('./lib/serialize', module => console.log(chalk.yellow(` "${module}" Telah diupdate!`)))
    
   sock.multi = true
 	sock.nopref = false
