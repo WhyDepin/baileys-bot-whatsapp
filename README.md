@@ -26,7 +26,7 @@
 * [Git](https://git-scm.com/downloads)
 
 ## SETTING
-* [`setting`](https://github.com/WhyDepin/baileys-bot-whatsapp/edit/main/config.json)
+* [`setting`](https://github.com/WhyDepin/baileys-bot-whatsapp/edit/main/config.js)
 
   
 ## Thanks
