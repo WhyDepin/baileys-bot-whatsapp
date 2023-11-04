@@ -149,6 +149,35 @@ $ (Exec)`
 sock.sendMessage(from, {text: text, contextInfo: { externalAdReply: {  title: 'Bens - MD', body: '© Team Tabrak Lurus', thumbnail: fs.readFileSync("./src/dep.jpg"), sourceUrl: 'https://youtube.com/playlist?list=RDwjWmfnvIrDw&playnext=1&si=MgY1RAkwmw43y80B', mediaType: 1, showAdAttribution: true, renderLargerThumbnail: true }}}, {quoted: m})
 }
 break
+case prefix+'self':{
+            if (!isOwner) return reply('Only owner')
+            sock.mode = 'self'
+            reply('Berhasil berubah ke mode self')
+            }
+            break
+        case prefix+'publik': case prefix+'public':{
+            if (!isOwner) return reply('Only owner')
+            sock.mode = 'public'
+            reply('Berhasil berubah ke mode public')
+            }
+            break
+        case prefix+'setprefix':
+            if (!isOwner) return reply('Only owner')
+            if (args.length < 2) return reply(`Masukkan prefix\nOptions :\n=> multi\n=> nopref`)
+            if (q === 'multi') {
+                sock.multi = true
+                reply(`Berhasil mengubah prefix ke ${q}`)
+            } else if (q === 'nopref') {
+                sock.multi = false
+                sock.nopref = true
+                reply(`Berhasil mengubah prefix ke ${q}`)
+            } else {
+                sock.multi = false
+                sock.nopref = false
+                sock.prefa = `${q}`
+                reply(`Berhasil mengubah prefix ke ${q}`)
+            }
+            break
 case prefix+'sc': {
   reply('_*Script: https://github.com/WhyDepin/baileys-bot-whatsapp*_')
   break
