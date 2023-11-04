@@ -111,6 +111,10 @@ if (chats.startsWith("=> ") && isOwner && evalOwn) {
 		   reply(`${err}`)
 		 }
 		}
+		
+		if (sock.mode === 'self'){
+            if (!isOwner) return
+        }
 
 // log chat masuk
 if (m.message && !m.isBaileys) {
