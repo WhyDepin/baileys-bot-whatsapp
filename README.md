@@ -30,7 +30,7 @@
 
   
 ## Thanks
-* [`Baileys`](https://github.com/adiwajshing/Baileys)
+* [`Baileys`](https://github.com/whiskeysockets/Baileys)
 * Tabrak Lurus Team
   
   
